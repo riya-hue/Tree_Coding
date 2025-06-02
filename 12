@@ -1,0 +1,19 @@
+ TC->O(2N),SC->O(N)
+ 
+while (cur != null || !st.isEmpty()) {
+    if (cur != null) {
+        st.push(cur);
+        cur = cur->left;
+    } 
+    else {
+        temp = st.top()->right;
+        if (temp == null) {
+            temp = st.top();
+            st.pop();
+            post.add(temp);
+            while(!st.empty && temp==st.top()->right)
+                 temp=st.top(),st.pop();
+                 post.add(temp->val);
+            else
+              curr=temp;
+              }
