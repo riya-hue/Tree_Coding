@@ -1,0 +1,11 @@
+Postorder Traversal 
+
+void postorder(node){
+
+  if(node==null)
+    return;
+
+  postorder(node->left);
+  postorder(node->right);
+  print(node->data);
+}
